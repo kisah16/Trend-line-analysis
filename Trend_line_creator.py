@@ -155,12 +155,8 @@ for symbol in symbol_list:
     df = df.drop(df.head(1).index)
     
     df.set_index('Timestamp', inplace=True)
-    
-    
-    # Take natural log of data to resolve price scaling issues
+
     data = df.copy()
-    # Trendline parameter
-    
 
     low_slope_all = []
     high_slope = [np.nan] * len(data)
